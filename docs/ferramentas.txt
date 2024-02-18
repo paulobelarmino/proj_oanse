@@ -1,0 +1,2 @@
+Postgres e PgAdmin [https://www.postgresql.org/download/windows/]
+git: [https://git-scm.com/download/win]
