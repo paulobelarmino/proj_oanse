@@ -10,6 +10,7 @@
   "author": "eve4t00n",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.19.2",
     "knex": "^3.1.0",
     "nodemon": "^3.1.0",
