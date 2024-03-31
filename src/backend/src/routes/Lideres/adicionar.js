@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../../../knexconfig')
+const bcrypt = require('bcrypt')
 
 router.get('/',(req,res) => {
     res.render('Lideres/adicionar')
@@ -9,6 +10,8 @@ router.get('/',(req,res) => {
 router.post('/cadastrar',async(req,res) => {
     await db('lideres').insert({
         nome: req.body.nome,
+        email: req.body.email,
+        senha: bcrypt.hashSync(req.body.senha,10),
         contato: req.body.contato,
         //Esses valores inicialmente serão 0 porque
         //eu apenas quero testar se a api está salvando
