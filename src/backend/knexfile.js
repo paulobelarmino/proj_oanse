@@ -1,4 +1,4 @@
-const database = require('knex')({
+module.exports = {
 
   client: 'pg',
   connection: {
@@ -13,6 +13,4 @@ const database = require('knex')({
   migrations: {
     tableName: 'knex_migrations'
   }
-})
-
-module.exports = database
+}
