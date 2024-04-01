@@ -4,7 +4,8 @@
   "description": "Sistema de Gerenciamento do OANSE-IBNP",
   "main": "./src/server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js",
+    "vercel-build": "npx knex migrate:up"
   },
   "keywords": [],
   "author": "eve4t00n",
