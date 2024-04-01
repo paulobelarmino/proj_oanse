@@ -1,13 +1,18 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
+const bcrypt = require('bcrypt')
+
 exports.seed = async function(knex) {
-  // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
-  ]);
-};
+
+  await knex('lideres').del()
+  await knex('lideres').insert([
+    {
+      id: 1,
+      nome: 'admin',
+      email: 'admin@email.com',
+      senha: bcrypt.hashSync('senhaadminuser',10),
+      contato: 123456,
+      id_endereco: 0,
+      id_funcao: 0,
+      status: 0 
+    }
+  ])
+}
