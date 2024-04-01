@@ -1,0 +1,10 @@
+<% if(error){%>
+    <p style="color: red;">Erro ao fazer Login</p>
+<%}%>
+<p><a href="/lideres">Voltar</a></p>
+<form action="login/login" method="post">
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="senha" placeholder="Senha" required />
+    <input type="submit" value="Login">
+</form>
+<p><a href="/lideres/recuperacao">Esqueci minha senha</a></p>

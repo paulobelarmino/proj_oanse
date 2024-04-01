@@ -4,13 +4,15 @@
   "description": "Sistema de Gerenciamento do OANSE-IBNP",
   "main": "./src/server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js",
+    "vercel-build": "npx knex migrate:up"
   },
   "keywords": [],
   "author": "eve4t00n",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cookie-session": "^2.1.0",
     "ejs": "^3.1.9",
     "express": "^4.19.2",
     "knex": "^3.1.0",
