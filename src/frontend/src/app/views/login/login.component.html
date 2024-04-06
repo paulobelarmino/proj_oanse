@@ -1,0 +1,34 @@
+
+<div class="p-grid" class="margin">
+        <img src="../../../assets/Image/logo_oanse.png" alt="Logo OANSE" height="12%"  >
+        <h4  class="p-col-12 p-sm-6 p-md-4" style="color: #000000; margin-bottom: 2em;" >Sistema de Gerenciamento - {{instituicao}}</h4>
+    <div class="p-grid p-justify-center">
+        <div>
+            <p-card  class="card" >
+                <div class="p-grid">
+                    <div  style="padding: 1.5em;">
+                        <span class="p-float-label"   >   
+                            <input [(ngModel)]="requestLogin.login" pInputText id="usuario" type="text"  style="width:17.5em;"  />
+                            <label  for="username">Usuário</label>
+                        </span>
+                    </div>
+                    <div style="padding: 1.5em;">
+                        <span class="p-float-label" >
+                            <p-password  [(ngModel)]="requestLogin.password"  id="senha" [toggleMask]="true"  [feedback]="false" class="p-col-12 p-sm-6 p-md-4" ></p-password>
+                            <label  for="username">Senha</label>
+                        </span>
+                        <p><a class="EscSenha" [routerLink]="['/forgot-password']" (mouseenter)="onMouseEnter()"
+                            (mouseleave)="onMouseLeave()"
+                            [ngClass]="{'hovered': isHovered}">Esqueci a senha</a></p>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <p-button (click)="doLogin()" label="Entrar" [text]="true" [raised]="false" severity="secondary"></p-button>
+                    </div>
+                </div>
+           </p-card>
+        </div>
+    </div>
+    
+
+</div>
